@@ -1,7 +1,5 @@
 FROM alpine
 
-RUN apk add --update bash
-RUN apk add --update curl
-RUN apk add --update jq
-
-RUN rm -rf /var/cache/apk/*
+RUN apk add --no-cache bash && \
+    apk add --no-cache curl  && \
+    apk add --no-cache jq
